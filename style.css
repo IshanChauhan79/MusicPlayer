@@ -1,0 +1,850 @@
+
+
+
+/* html and body-----------------------------------------------------------*/
+html{
+	height:100%;
+	width:100%;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+body{
+	height: 100%;
+	width:100%;
+	margin:0;
+}
+
+/* header ----------------------------------------------------*/
+#main-header{
+	height:8%;
+	min-height:70px;
+	display:flex;
+	position: fixed;
+	width:100%;
+	z-index: 2;
+
+}
+#header-div{
+	height: 100%;
+	display:flex;
+	width: 25%;
+}
+
+#header-div img{
+	height: 55px;
+	width:55px;
+	margin-top:10px;
+	margin-left:20px;
+}
+#title-div{
+	box-sizing: border-box;
+	padding-top: 25px;
+	height:100%;
+}
+
+#title-name{
+		margin:0;
+	font-weight: 500;
+	font-size: 2rem;
+
+}
+#fav{
+	width:20%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	
+}
+
+#search{
+	width:35% ;
+	display:flex;
+	align-items: center;
+	
+}
+#search-icon{
+	border:none;
+	border-bottom-left-radius :0.5rem;
+	border-top-left-radius: 0.5rem;
+	padding:6px;
+
+}
+input[type=text]{
+	border:none;
+	position: relative;
+	border-bottom-right-radius :0.5rem;
+	border-top-right-radius: 0.5rem;
+	padding:6px;
+	width:220px;
+}
+
+
+
+#account{
+	width:20%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 1;
+	
+
+}
+#notification{
+	position: relative;
+}
+#notification::after{
+	content:'';
+	font-size:0;
+	background-color: red;
+	border:3px solid red;
+	border-radius:50%;
+	position: absolute;
+	left:60%;
+	top:10%;
+	z-index:2;
+}
+#login{
+	height:50px;
+	width:50px;
+	border-radius: 50%;
+	background-image: url(singer/avichii.jpg);
+	background-position:center;
+	background-size:cover;
+	transition: all 1s ease-in-out
+}
+
+/* main -----------------------------------------------*/
+main{
+	width: 64%;
+	position: absolute;
+	margin-top: 90px;
+	z-index:1;
+	margin-bottom:70px;
+}
+
+#songs-type{
+	margin-top: 20px;
+	height:20vh;
+	min-height: 260px;
+	min-width: 350px;
+	text-align: center;
+	overflow:hidden;
+	transition: all 0.3s ease-in-out; 
+}
+#songs-type div{
+	
+	width:215px;
+	height:215px;
+	margin:15px;
+	transition: all 0.3s ease-in-out; 
+}
+#songs-type:hover div{
+	filter:blur(1px) brightness(80%);
+	transform: scale(0.9);
+}
+#songs-type div:hover{
+	filter: blur(0) brightness(100%);
+	transform: scale(1.1);
+}
+
+#img1{
+	background-image: url('mood/sleep.jpg');
+	
+
+}
+#img2{
+	background-image: url('mood/moodbuster.jpg');
+}
+#img3{
+	background-image: url('mood/edm.jpg');
+}
+
+
+.recent{
+	position: relative;
+	min-height: 250px;
+	height:20vh;
+	
+}
+.h3font{
+	margin-top:0.5rem;
+	margin-bottom:0.5rem;
+
+}
+
+.main-block{
+	margin-top: 3vh;
+	overflow:hidden;
+}
+.recent-container{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.recent-flex{
+	width: 45%;
+	min-width:280px;
+	min-height: 100px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.recent-img{
+	background-image: url("songs/wakemeup.jpg");
+}
+.recent-img-prop{
+	height: 100px;
+	width:100px;
+	margin-left: 30px;
+	text-align: center;
+}
+.recent-middle{
+	position: absolute;
+	left:140px;
+	top:0;
+}
+.recent-container h4{
+	margin-bottom: 0.8rem;
+	margin-top:0.8rem;
+	font-size:1.1rem;
+	color: #D7DADC;
+}
+.recent-container p{
+	margin-top: 0.4rem;
+	font-size:1rem;
+	color: #818384
+}
+#artists{
+	height:15vh;
+	min-height:170px;
+	display: flex;
+	justify-content: center;
+	flex-wrap:wrap;
+	
+}
+#artists div{	
+	text-align: center;
+	width:160px;
+	height:160px;
+	margin:10px;
+	transition: all 0.3s ease-in-out; 
+}
+#artist1{
+	background-image: url('singer/onedirection2.jpg');
+}
+#artist2{
+	background-image: url(singer/marshmellow.jpg);
+}
+#artist3{
+	background-image: url(singer/maroon5.jpg);
+}
+#artist4{
+	background-image: url(singer/avichii.jpg);
+}
+#artist5{
+	background-image: url(singer/zaynmalik.jpg);
+}
+#artist6{
+	background-image: url(singer/alanwalker.jpg);
+}
+.imgborder50{
+	border-radius: 50%;
+}
+
+.padvw{
+	padding-right: 3vw;
+	padding-left: 3vw;
+}
+/* main of avicii.html ---------------------------*/
+#avicii{
+	overflow: auto;
+}
+.avicii-info{
+	width: 100%;
+	height:25vh;
+	min-height: 250px;
+	margin-top: 2vh;
+	margin-bottom:2vh;
+	overflow:hidden;
+	box-sizing:border-box;
+
+}
+.avicii-img{
+	background-image: url(singer/avichii.jpg);
+	height:250px;
+	width: 180px;
+}
+.avicii-header{
+	position: absolute;
+	width:60%;
+}
+.avicii-header h2{
+	margin-top:0.3rem;
+	margin-left:1rem;
+	margin-bottom:0.5rem;
+}
+.avicii-header h4{
+	margin-top:0.3rem;
+	margin-left:1rem;
+	margin-bottom:0.5rem;
+}
+.avicii-header p{
+	margin-top:1rem;
+	margin-left:1rem;
+	font-size:0.9rem;
+	margin-bottom: 5rem;
+}
+.avicii-header:after{
+	content:'Followers: 50k';
+	position: absolute;
+	right:5%;
+	top:5%;
+	font-size:0.9rem;
+	color: #0079D3;
+}
+#avicii-button{
+	position:absolute;
+	bottom:10%;	
+	left:10%;
+}
+#play-all{
+	border:none;
+	    background-image: linear-gradient(to right,#FFEB3B ,#ff9907 ,#523101);
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	font-weight: 600;
+}
+#avicii-span{
+	margin-left:3rem;
+	font-weight: 600;
+}
+.heart-icon{
+	right:10%;
+}
+#avicii-song h4{
+	margin-bottom: 0.1rem;
+	margin-top:0.4rem;
+	color: #D7DADC
+}
+#avicii-song p{
+	margin-top: 0.4rem;
+	font-size:0.8rem;
+}
+
+/* aside ------------------------------------------------------*/
+aside{
+
+	width: 35%;
+	height:80%;
+	right:0;
+	position: fixed;
+	margin-top: 80px;
+	z-index: 1;
+}
+
+#playlist-header{
+	display: flex;
+	justify-content: space-between;
+}
+#dropdown{
+	position: absolute;
+	z-index: 3;
+	right:10%;
+	top:70px;
+	display: none;
+
+}
+#dropdown div{
+	padding:0.4rem;
+	font-weight:600;
+}
+#dropdown:target{
+	display: block;
+}
+.bottomb{
+
+	border-bottom:  1px solid black;
+}
+#playlist-content{
+	overflow: scroll;
+	height:100%;
+
+
+
+}
+.song1{
+	background-image: url(songs/alone.jpg);
+	
+}
+.song2{
+	background-image: url(songs/darkside.jpg);
+	
+}
+.song3{
+	background-image: url(songs/storyofmylife.jpg);
+	
+}
+.song4{
+	background-image: url(songs/blocks.jpg);
+	
+}
+.song5{
+	background-image: url(songs/waitingforlove.jpg);
+	
+}
+.song6{
+	background-image: url(songs/wakemeup.jpg);
+	
+}
+.song7{
+	background-image: url(songs/storyofmylife.jpg);
+	
+}
+.song-image{
+	height: 50px;
+	width:50px;
+	margin-left: 30px;
+	margin-top: 20px;
+	text-align: center;
+}
+#playlist-content img{
+	height: 50px;
+	width:50px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+#playlist-content div i{
+	font-size:1.3rem;
+
+}
+.song{
+	position: relative;
+	color: #818384
+}
+#playlist-content h4{
+	margin-bottom: 0.1rem;
+	margin-top:0.4rem;
+	color: #D7DADC
+}
+#playlist-content p{
+	margin-top: 0.4rem;
+	font-size:0.8rem;
+}
+/* footer -----------------------------------------*/
+#player{
+	position: fixed;
+	height:0;
+	overflow:hidden;
+	width:0;
+	bottom: 0;
+	z-index: 2;
+	width: 100%;
+	transition: all 1s ease-in-out;
+	
+}
+#player:target{
+	height: 6%;
+	min-height: 70px;
+}
+
+#player-box{
+	display:flex;
+	width:80%;
+	height: 100%;
+	position: relative;
+	left:10%;
+	justify-content: space-between;
+	align-items: center;
+
+}
+.player-flex{
+	width: 20%;
+	min-width:180px;
+	min-height: 60px;
+	height:70%;
+	position: relative;
+}
+.player-img{
+	background-image: url("songs/wakemeup.jpg");
+}
+.player-img-prop{
+	height: 60px;
+	width:60px;
+	text-align: center;
+}
+.player-middle{
+	position: absolute;
+	left:70px;
+	top:0;
+}
+.player-flex h4{
+	margin-bottom: 0.1rem;
+	margin-top:0.1rem;
+
+}
+
+.player-flex p{
+	margin-top: 0.2rem;
+	font-size:1rem;
+}
+.controls{
+	position:relative; 
+	width:50%;
+	min-width: 200px;
+	min-height: 60px;
+	height:70%;
+}
+.volume{
+	min-width: 100px;
+	width:15%;
+	min-height: 60px;
+	height:70%;
+	position: relative;
+}
+.slider{
+	position:relative;
+	top:40%;
+	left:15%;
+	width:70%;	
+	height: 5px;
+	border-radius: 02rem;
+	background-color: lightgrey;
+}
+.slider-avichi{
+	top:55%;
+}
+.slider-volume{
+	width:55%;
+	left:25%;
+}
+.slider-grey{
+	border-radius: 2rem;
+	width:30%;
+	height:100%;
+	background-color:#FF9907;
+	
+}
+.slider::after{
+	content:'';
+	font-size:0;
+	background-color: white;
+	border:6px solid white;
+	border-radius:50%;
+	position: absolute;
+	top:-60%;
+	left:30%;
+	z-index:2;
+}
+.player-time{
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 0.8rem;
+	top:45%;
+}
+.time-start{
+	left:8%;
+}
+.time-end{
+	left:86%;
+}
+.player-icons{
+	position: absolute;
+	top:15%;
+
+}
+.pause-icon{
+	position: absolute;
+	top:4%;
+	left:48.5%;
+	font-size:1.7rem;
+}
+.s-icon{
+	left:25%;
+}
+.b-icon{
+	left:40%;
+}
+.f-icon{
+	left:60%;
+}
+.r-icon{
+	left:75%;
+}
+.exp-icon{
+	left:80%;
+	top:10%;
+}
+.avicii-slider{
+	top:52%;
+}
+
+/* comman classes-------------------------------------------*/
+.text-design{
+	
+	font-size: 1rem;
+	font-weight: 550;
+	word-spacing: 0.1rem;
+	letter-spacing: 0.06rem
+}
+.imgalign{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;	
+
+}
+.img-blur{
+	border-radius: 5px;
+}
+
+.san-font{
+	font-family: sans-serif;
+}
+.mtop{
+	margin-top: 1rem;
+}
+.inlineb{
+	display: inline-block;
+	margin-right: 5px;
+ 	
+}
+.mright{
+	margin-right:1px; 
+}
+.pad5{
+	padding:5px;
+	box-sizing: border-box;
+}
+.padl{
+	padding-right:5%;
+}
+
+.b{
+	border:2px solid var(--backc);
+}
+.pos-center{
+	position:absolute;
+	top:45%;
+}
+.pos-middle{
+	position: absolute;
+	left:90px;
+	top:23%;
+}
+.pos-right{
+	right:0;
+}
+.pos-top{
+	position: absolute;
+	top: 0;
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	text-align: none;
+	transform:translateY(25%);
+	font-size:1.5rem;
+	opacity:0;
+}
+.hov-blur:hover{
+	filter:brightness(80%);
+}
+.content:hover{
+	opacity:1 ;
+	filter: brightness(200%);
+}
+
+a {
+	text-decoration: none;
+	color: #818384;
+}
+/* colors-------------------------------------*/
+
+.blackbg{
+	background-color: black
+}
+.greybg{
+	background-color: grey
+}
+.lightgreybg{
+	background-color:#272729
+}
+.whitebg{
+	background-color: white
+}
+
+.darkgreybg{
+	background-color: #1A1A1B
+}
+
+.greycolor{
+	color:grey
+}
+.lightgreycolor{
+	color: #818384
+}
+.whitecolor{
+	color: white
+}
+.lightwhitecolor{
+	color: #D7DADC
+}
+
+.orangecolor{
+	color:#FF9907
+}
+.bluecolor{
+	color: #0079D3;
+}
+/* media quries-----------------------------------------*/
+
+@media screen and (max-width: 1400px)
+{	
+	#songs-type{
+		min-height: 200px;
+		min-width: 350px;
+	}
+	#songs-type div{
+		width:180px;
+		height:180px;
+		margin:5px;
+	}
+	#recent{
+		position: relative;
+		min-height: 200px;
+		height:50vh;
+	
+	}
+	#artists{
+		height:10vh;
+		min-height: 120px;
+	}
+	#artists div{	
+		width:100px;
+		height:100px;
+
+	}
+
+}
+
+@media screen and (max-width: 1000px)
+{	
+	#songs-type div{
+		width:150px;
+		height:150px;
+	}
+
+	.recent-flex{
+	width: 100%;
+	}
+	#song-slider{
+		width:60%;
+		left:20%;
+	}
+}
+
+@media screen and (max-width: 850px)
+{
+	
+	main{
+		width:100%;
+		position: relative;
+		display: inline-block;
+		margin-bottom:0;
+	}
+	aside{
+		display: inline-block;
+		width:100%;
+		position: relative;
+		margin-top: 0;
+		height:30vh;
+		min-height: 300px;
+		
+	}
+	
+	
+	input[type=text]{
+	width:160px;
+	}
+}
+@media screen and (max-width: 700px)
+{
+	#player-box{
+		width:95%;
+		left:2%;
+	}
+}
+@media screen and (max-width: 600px){
+	#main-header{
+		justify-content: space-between;
+	}
+	#header-div{
+		width:30%;
+	}
+	#fav{
+		width:20%;
+	}
+	#search{
+		width:30%;
+	}
+	#account{
+		width:20%;
+	}
+	input[type=text]{
+	width:100px;
+}
+@media screen and (max-width: 550px){
+	#songs-type{
+		min-height: 100px;
+		min-width: 350px;
+		height:8vh;
+	}
+	#songs-type div{
+		width:100px;
+		height:100px;
+		margin:5px;
+	}
+	#artists{
+		height:8vh;
+		min-height: 80px;
+	}
+	#artists div{	
+		width:70px;
+		height:70px;
+
+	}
+	.avicii-info{
+		height:30vh;
+		min-height: 300px;
+	}
+	.avicii-header{
+		min-height: 300px;
+	}
+
+}
+@media screen and (max-width: 600px){
+	#main-header{
+		min-width: 300px;
+	}
+	#search{
+		width:10%;
+	}
+	
+	input[type=text]{
+	width:0;
+}
+}
+@media screen and (max-width: 500px){
+	#player-box{
+		justify-content: space-evenly;
+	}
+	.player-flex{
+		display: none;
+	}
+}
+}
